@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87B8F6E91A60C24E00B3C55B /* TFDistanceTraveled.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B8F6E81A60C24E00B3C55B /* TFDistanceTraveled.m */; };
 		BF5E96BF1A60B8450024D538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96BE1A60B8450024D538 /* AppDelegate.swift */; };
 		BF5E96C11A60B8450024D538 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96C01A60B8450024D538 /* FirstViewController.swift */; };
 		BF5E96C31A60B8450024D538 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96C21A60B8450024D538 /* SecondViewController.swift */; };
@@ -27,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87B8F6E01A60BF4F00B3C55B /* TeamFit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TeamFit.entitlements; sourceTree = "<group>"; };
+		87B8F6E71A60C24D00B3C55B /* TeamFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeamFit-Bridging-Header.h"; sourceTree = "<group>"; };
+		87B8F6E81A60C24E00B3C55B /* TFDistanceTraveled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFDistanceTraveled.m; sourceTree = "<group>"; };
+		87B8F6EA1A60C26900B3C55B /* TFDistanceTraveled.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFDistanceTraveled.h; sourceTree = "<group>"; };
 		BF5E96B91A60B8450024D538 /* TeamFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5E96BD1A60B8450024D538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5E96BE1A60B8450024D538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,13 +84,17 @@
 		BF5E96BB1A60B8450024D538 /* TeamFit */ = {
 			isa = PBXGroup;
 			children = (
+				87B8F6E01A60BF4F00B3C55B /* TeamFit.entitlements */,
 				BF5E96BE1A60B8450024D538 /* AppDelegate.swift */,
+				87B8F6EA1A60C26900B3C55B /* TFDistanceTraveled.h */,
+				87B8F6E81A60C24E00B3C55B /* TFDistanceTraveled.m */,
 				BF5E96C01A60B8450024D538 /* FirstViewController.swift */,
 				BF5E96C21A60B8450024D538 /* SecondViewController.swift */,
 				BF5E96C41A60B8450024D538 /* Main.storyboard */,
 				BF5E96C71A60B8450024D538 /* Images.xcassets */,
 				BF5E96C91A60B8450024D538 /* LaunchScreen.xib */,
 				BF5E96BC1A60B8450024D538 /* Supporting Files */,
+				87B8F6E71A60C24D00B3C55B /* TeamFit-Bridging-Header.h */,
 			);
 			path = TeamFit;
 			sourceTree = "<group>";
@@ -164,6 +173,12 @@
 				TargetAttributes = {
 					BF5E96B81A60B8450024D538 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Z5SLZ6QPTL;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 					BF5E96CF1A60B8460024D538 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -218,6 +233,7 @@
 				BF5E96C31A60B8450024D538 /* SecondViewController.swift in Sources */,
 				BF5E96BF1A60B8450024D538 /* AppDelegate.swift in Sources */,
 				BF5E96C11A60B8450024D538 /* FirstViewController.swift in Sources */,
+				87B8F6E91A60C24E00B3C55B /* TFDistanceTraveled.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +356,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TeamFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TeamFit/TeamFit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +370,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TeamFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TeamFit/TeamFit-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +432,7 @@
 				BF5E96DC1A60B8460024D538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF5E96DD1A60B8460024D538 /* Build configuration list for PBXNativeTarget "TeamFitTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +441,7 @@
 				BF5E96DF1A60B8460024D538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

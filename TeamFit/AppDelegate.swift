@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let myLocation = TFDistanceTraveled();
+        let location =  myLocation.doVelocity(true);
+        println(location);
+        println("success");
+
         // Override point for customization after application launch.
         return true
     }
