@@ -198,18 +198,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-fK-37R">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Create Account">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="382" width="107" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="Dic-og-5cn" kind="show" id="ZEt-yY-4yo"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRm-Se-B80">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -260,28 +248,40 @@
                                     <rect key="frame" x="71" y="28" width="240" height="128"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-fK-37R">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="405" width="107" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Dic-og-5cn" kind="show" id="ZEt-yY-4yo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="pqI-fK-37R"/>
                                 <exclude reference="kRm-Se-B80"/>
                                 <exclude reference="fn0-dp-7hc"/>
                                 <exclude reference="FMS-e1-Hwo"/>
                                 <exclude reference="M28-aq-cNB"/>
                                 <exclude reference="mXN-Qr-Eti"/>
                                 <exclude reference="ZaI-oa-0x8"/>
+                                <exclude reference="pqI-fK-37R"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="pqI-fK-37R"/>
                                 <include reference="kRm-Se-B80"/>
                                 <include reference="fn0-dp-7hc"/>
                                 <include reference="FMS-e1-Hwo"/>
                                 <include reference="M28-aq-cNB"/>
                                 <include reference="mXN-Qr-Eti"/>
                                 <include reference="ZaI-oa-0x8"/>
+                                <include reference="pqI-fK-37R"/>
                             </mask>
                         </variation>
                     </view>
