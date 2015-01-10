@@ -1,0 +1,164 @@
+timestamp: 2015-01-09T22:29:07.995804
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2015-01-09T22:29:07.999270
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2015-01-09T22:29:08.001761
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2015-01-09T22:29:08.006296
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2015-01-09T22:29:08.009975
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2015-01-09T22:29:08.012824
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2015-01-09T22:40:32.686819
+CREATE TABLE team(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    score INTEGER
+);
+success!
+timestamp: 2015-01-09T22:43:43.200381
+CREATE TABLE userTeam(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512),
+    score INTEGER
+);
+success!
+timestamp: 2015-01-09T22:43:43.219719
+ALTER TABLE auth_user ADD weight INTEGER;
+timestamp: 2015-01-09T22:43:43.222471
+ALTER TABLE auth_user ADD age INTEGER;
+timestamp: 2015-01-09T22:43:43.225238
+ALTER TABLE auth_user ADD sex CHAR(512);
+timestamp: 2015-01-09T22:43:43.228743
+ALTER TABLE auth_user ADD team INTEGER REFERENCES userTeam (id) ON DELETE CASCADE;
+timestamp: 2015-01-09T22:43:43.230420
+ALTER TABLE auth_user ADD currentcaloriccount INTEGER;
+timestamp: 2015-01-09T22:43:43.232028
+ALTER TABLE auth_user ADD height INTEGER;
+timestamp: 2015-01-09T22:43:43.233875
+ALTER TABLE auth_user ADD dailycoloricgoal INTEGER;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2015-01-09T22:51:22.151562
+ALTER TABLE userTeam ADD users TEXT;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2015-01-09T22:54:07.735469
+ALTER TABLE userTeam ADD user2 INTEGER REFERENCES auth_user (id) ON DELETE CASCADE;
+timestamp: 2015-01-09T22:54:07.737964
+ALTER TABLE userTeam ADD user1 INTEGER REFERENCES auth_user (id) ON DELETE CASCADE;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
