@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+=======
+		238B94521A60F8980012A050 /* BodyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B94511A60F8980012A050 /* BodyInfoViewController.swift */; };
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
 		BF5E96BF1A60B8450024D538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96BE1A60B8450024D538 /* AppDelegate.swift */; };
 		BF5E96C11A60B8450024D538 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96C01A60B8450024D538 /* FirstViewController.swift */; };
 		BF5E96C31A60B8450024D538 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96C21A60B8450024D538 /* SecondViewController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+=======
+		238B94511A60F8980012A050 /* BodyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyInfoViewController.swift; sourceTree = "<group>"; };
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
 		BF5E96B91A60B8450024D538 /* TeamFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5E96BD1A60B8450024D538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5E96BE1A60B8450024D538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+=======
+				238B94521A60F8980012A050 /* BodyInfoViewController.swift in Sources */,
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
 				BF5E96C31A60B8450024D538 /* SecondViewController.swift in Sources */,
 				BF5E96BF1A60B8450024D538 /* AppDelegate.swift in Sources */,
 				BF5E96C11A60B8450024D538 /* FirstViewController.swift in Sources */,

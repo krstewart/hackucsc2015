@@ -61,7 +61,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1668" y="-300"/>
+=======
+            <point key="canvasLocation" x="1428" y="-709.5"/>
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -379,7 +383,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VL5-2k-iy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-204" y="0.0"/>
+=======
+            <point key="canvasLocation" x="-987" y="-63"/>
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -406,6 +414,10 @@
             <objects>
                 <navigationController title="Registration / Login" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7Rl-0d-adw" sceneMemberID="viewController">
                     <toolbarItems/>
+<<<<<<< HEAD
+=======
+                    <navigationItem key="navigationItem" id="F7f-Rz-776"/>
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cxM-jP-Ryw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -417,7 +429,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3J-pV-0Gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-3651" y="-31.5"/>
+=======
+            <point key="canvasLocation" x="-3555" y="-63"/>
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
         </scene>
     </scenes>
     <resources>
@@ -425,7 +441,12 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="mPm-6R-WDX"/>
         <segue reference="KbO-CP-aOO"/>
+=======
+        <segue reference="230-Gj-rg1"/>
+        <segue reference="JeA-Au-8sB"/>
+>>>>>>> parent of 2104b7b... Merge branch 'Loren'sBranch' into Jakes-branch
     </inferredMetricsTieBreakers>
 </document>
