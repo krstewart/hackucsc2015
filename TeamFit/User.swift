@@ -26,6 +26,6 @@ class User {
     }
     
     func toJSON() -> String {
-        return ""
+        return "{\"User\":{\"id\":\(id),\"name\":\"\(name)\",\"age\":\"\(age)\",\"sex\":\"\(sex)\",\"height\":\"\(height)\",\"weight\":\"\(weight)\"}}"
     }
 }
