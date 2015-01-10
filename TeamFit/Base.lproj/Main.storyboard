@@ -56,7 +56,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-5" y="156" width="410" height="498"/>
+                                    <rect key="frame" x="-5" y="108" width="410" height="498"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -81,6 +81,7 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="Djy-cM-LH3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -434,10 +435,10 @@
             </objects>
             <point key="canvasLocation" x="-204" y="0.0"/>
         </scene>
-        <!--Team Table View Controller-->
+        <!--Search Team-->
         <scene sceneID="1KG-E8-dzs">
             <objects>
-                <tableViewController id="FB9-lx-KPw" customClass="TeamTableViewController" customModule="TeamFit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Search Team" id="FB9-lx-KPw" customClass="TeamTableViewController" customModule="TeamFit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" id="E2g-TA-WYV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -451,7 +452,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="77" id="Mp9-Nd-h1u">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="77" id="Mp9-Nd-h1u">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mp9-Nd-h1u" id="coB-zG-u5Y">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -486,7 +487,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="702" y="-271.5"/>
+            <point key="canvasLocation" x="571" y="-584"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -533,7 +534,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="KbO-CP-aOO"/>
         <segue reference="mPm-6R-WDX"/>
-        <segue reference="JeA-Au-8sB"/>
     </inferredMetricsTieBreakers>
 </document>

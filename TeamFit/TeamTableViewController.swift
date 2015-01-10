@@ -62,6 +62,7 @@ class TeamTableViewController: UITableViewController, UISearchBarDelegate, UISea
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         var team : Team
         
+        
         if tableView == self.searchDisplayController!.searchResultsTableView {
             team = filteredTeams[indexPath.row]
         } else {
