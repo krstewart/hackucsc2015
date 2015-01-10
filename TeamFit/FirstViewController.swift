@@ -13,6 +13,7 @@ import CoreMotion
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var runSwitch: UISwitch!
     
+    @IBOutlet weak var distanceTraveledLabel: UILabel!
     @IBOutlet weak var mphLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
     var locationManager: CLLocationManager?
@@ -21,7 +22,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     var  locationStack: [String] = []
     var  startTime = NSTimeInterval()
     var  time = 0
-   
+    var  firstLocation = CLLocation()
 
     var  distanceTraveled = 0
     
@@ -49,8 +50,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     func switchIsChanged(mySwitch: UISwitch) {
         if mySwitch.on {
           getVelocity(true)
+        //    mySwitch.setOn(false, animated:true)
+
         } else {
+          print("turned off")
           getVelocity(false)
+          //  mySwitch.setOn(false, animated:true)
+
         }
     }
     func locationManager(manager: CLLocationManager!,
@@ -62,15 +68,18 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
                 var sinceLastUpdate = newLocation.timestamp.timeIntervalSinceDate(oldLocation.timestamp)
                 var calculatedSpeed = distanceChange / sinceLastUpdate
                 var mphSpeed = calculatedSpeed * 2.2369
-                
+                var distanceTraveled =
+                    newLocation.distanceFromLocation(firstLocation)
+                print("first location should be const")
+                print(firstLocation.description)
                 print(NSString(format:"you are moving at %.2f m/s \n",calculatedSpeed))
                 speedLabel.text = (NSString(format: "You are moving at %.2f m/s \n", calculatedSpeed))
                 mphLabel.text = (NSString(format: "You are moving at %.2f mph \n", mphSpeed))
-             //  let CLLocationDistance distanceChange = newLocation.distanceFromLocation(oldLocation)
-               // CLLocationDistance distanceChange = newLocation.distanceFromLocation(oldLocation)
-                
-      //          NSTimeInterval sinceLastUpdate = newLocation.timestamp.timeIntervalSinceDate(oldLocation.timestamp)
-       //         double calculatedSpeed = distanceChange / sinceLastUpdate;
+                distanceTraveledLabel.text =
+                   (NSString(format: "You have traveled %.2f meters\n", distanceTraveled))
+            }
+            else if (oldLocation == nil){
+                firstLocation = newLocation
             }
             latitude = "\(newLocation.coordinate.latitude)"
             longitude = "\(newLocation.coordinate.longitude)"
@@ -142,6 +151,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+    //    runSwitch.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         self.getVelocity(true);
         /* Are location services available on this device? */
         if CLLocationManager.locationServicesEnabled(){
