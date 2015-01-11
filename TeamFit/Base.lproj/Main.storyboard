@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Rl-0d-adw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Rl-0d-adw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -189,7 +189,7 @@
         <!--Registration-->
         <scene sceneID="Big-vw-sk3">
             <objects>
-                <viewController title="Registration" id="RHh-SA-wqS" sceneMemberID="viewController">
+                <viewController title="Registration" id="RHh-SA-wqS" customClass="RegViewController" customModule="TeamFit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oAH-Rl-Ksd"/>
                         <viewControllerLayoutGuide type="bottom" id="2FS-I9-FFx"/>
@@ -242,12 +242,6 @@
                                     <segue destination="0mX-gv-KIj" kind="presentation" id="TXx-yX-3Xc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="ZaI-oa-0x8">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="71" y="28" width="240" height="128"/>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqI-fK-37R">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Create Account">
@@ -269,7 +263,6 @@
                                 <exclude reference="FMS-e1-Hwo"/>
                                 <exclude reference="M28-aq-cNB"/>
                                 <exclude reference="mXN-Qr-Eti"/>
-                                <exclude reference="ZaI-oa-0x8"/>
                                 <exclude reference="pqI-fK-37R"/>
                             </mask>
                         </variation>
@@ -280,7 +273,6 @@
                                 <include reference="FMS-e1-Hwo"/>
                                 <include reference="M28-aq-cNB"/>
                                 <include reference="mXN-Qr-Eti"/>
-                                <include reference="ZaI-oa-0x8"/>
                                 <include reference="pqI-fK-37R"/>
                             </mask>
                         </variation>
@@ -303,33 +295,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-qE-Vej">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="296" y="26" width="72" height="28"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="c4L-dy-NVP" kind="show" id="erF-Td-FWG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyn-mu-yFF">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Restart">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.018539993604963279" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="20" width="64" height="36"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="7Rl-0d-adw" kind="push" id="230-Gj-rg1"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z6q-7P-bHf">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                                 <segments>
@@ -338,72 +303,116 @@
                                 </segments>
                                 <color key="tintColor" red="0.1053306502525253" green="0.095366368510083122" blue="0.10483950667738538" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="64" width="337" height="29"/>
+                                    <rect key="frame" x="32" y="131" width="336" height="29"/>
                                 </variation>
                             </segmentedControl>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNr-Nf-7go">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="160" width="103" height="162"/>
+                                    <rect key="frame" x="72" y="224" width="103" height="162"/>
                                 </variation>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLE-nb-Ezc">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="160" width="103" height="162"/>
+                                    <rect key="frame" x="226" y="224" width="103" height="162"/>
                                 </variation>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmN-9z-aYl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmN-9z-aYl">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="89" y="160" width="34" height="21"/>
+                                    <rect key="frame" x="100" y="222" width="47" height="23"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjK-B6-dOl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjK-B6-dOl">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="235" y="160" width="51" height="21"/>
+                                    <rect key="frame" x="246" y="224" width="62" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ks-7w-QQI">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="145" y="117" width="78" height="27"/>
+                                    <rect key="frame" x="161" y="189" width="78" height="27"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eeq-uK-XW8">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Body Info">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="28" name="Avenir-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="87" y="13" width="227" height="51"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZX-9n-VJe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="24" width="72" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="RHh-SA-wqS" kind="push" id="yUm-wW-xFG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-qE-Vej">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="326" y="25" width="42" height="28"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="c4L-dy-NVP" kind="show" id="erF-Td-FWG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="q5q-qE-Vej"/>
-                                <exclude reference="Xyn-mu-yFF"/>
                                 <exclude reference="Z6q-7P-bHf"/>
                                 <exclude reference="qNr-Nf-7go"/>
                                 <exclude reference="TLE-nb-Ezc"/>
                                 <exclude reference="PmN-9z-aYl"/>
                                 <exclude reference="vjK-B6-dOl"/>
                                 <exclude reference="9Ks-7w-QQI"/>
+                                <exclude reference="Eeq-uK-XW8"/>
+                                <exclude reference="qZX-9n-VJe"/>
+                                <exclude reference="q5q-qE-Vej"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="q5q-qE-Vej"/>
-                                <include reference="Xyn-mu-yFF"/>
                                 <include reference="Z6q-7P-bHf"/>
                                 <include reference="qNr-Nf-7go"/>
                                 <include reference="TLE-nb-Ezc"/>
                                 <include reference="PmN-9z-aYl"/>
                                 <include reference="vjK-B6-dOl"/>
                                 <include reference="9Ks-7w-QQI"/>
+                                <include reference="Eeq-uK-XW8"/>
+                                <include reference="qZX-9n-VJe"/>
+                                <include reference="q5q-qE-Vej"/>
                             </mask>
                         </variation>
                     </view>
@@ -415,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M97-8Y-gdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1917" y="-63"/>
+            <point key="canvasLocation" x="-1713" y="-63"/>
         </scene>
         <!--Create Team-->
         <scene sceneID="d7l-ep-7Xs">
@@ -429,25 +438,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czo-nW-bu0">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roK-rW-kpM">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Create a Team">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="28" name="Avenir-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="601" width="46" height="30"/>
+                                    <rect key="frame" x="96" y="64" width="227" height="51"/>
                                 </variation>
-                            </button>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Team Name" textAlignment="center" minimumFontSize="34" translatesAutoresizingMaskIntoConstraints="NO" id="dsy-yE-eMK">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="187" width="216" height="43"/>
+                                </variation>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgz-mA-FxJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Create Team">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="601" width="46" height="30"/>
+                                    <rect key="frame" x="157" y="238" width="105" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="popoverPresentation" popoverAnchorView="Wgz-mA-FxJ" id="JeA-Au-8sB">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bh-Og-dFV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Join Existing Team">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="276" width="128" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="yjp-Qq-EFB" kind="popoverPresentation" popoverAnchorView="0Bh-Og-dFV" id="zy6-K2-kck">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -456,14 +496,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Czo-nW-bu0"/>
+                                <exclude reference="roK-rW-kpM"/>
+                                <exclude reference="dsy-yE-eMK"/>
                                 <exclude reference="Wgz-mA-FxJ"/>
+                                <exclude reference="0Bh-Og-dFV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Czo-nW-bu0"/>
+                                <include reference="roK-rW-kpM"/>
+                                <include reference="dsy-yE-eMK"/>
                                 <include reference="Wgz-mA-FxJ"/>
+                                <include reference="0Bh-Og-dFV"/>
                             </mask>
                         </variation>
                     </view>
@@ -471,6 +515,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VL5-2k-iy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-987" y="-63"/>
+        </scene>
+        <!--Team Table View Controller-->
+        <scene sceneID="Vc7-R6-LFi">
+            <objects>
+                <tableViewController id="yjp-Qq-EFB" customClass="TeamTableViewController" customModule="TeamFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="566" sectionHeaderHeight="22" sectionFooterHeight="22" id="MQ8-16-qDm">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Tfr-Xd-Z0S">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="yjp-Qq-EFB" id="qCw-SB-At7"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="566" id="BrT-lh-AAg">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BrT-lh-AAg" id="4pb-g1-whR">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yjp-Qq-EFB" id="i6n-ZB-xRE"/>
+                            <outlet property="delegate" destination="yjp-Qq-EFB" id="HE3-h8-Wb6"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="GRT-hk-6b6" id="bh1-ea-fKZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFd-no-l2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="BVm-mH-FJ0">
+                    <connections>
+                        <outlet property="delegate" destination="yjp-Qq-EFB" id="wUu-rd-Y0g"/>
+                        <outlet property="searchContentsController" destination="yjp-Qq-EFB" id="n64-KR-MaT"/>
+                        <outlet property="searchResultsDataSource" destination="yjp-Qq-EFB" id="XFV-AL-KeN"/>
+                        <outlet property="searchResultsDelegate" destination="yjp-Qq-EFB" id="EVQ-xd-Vi1"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="bJF-F4-Hk8">
+                    <connections>
+                        <outlet property="delegate" destination="yjp-Qq-EFB" id="s15-sw-ZdB"/>
+                        <outlet property="searchContentsController" destination="yjp-Qq-EFB" id="jaS-bd-QLV"/>
+                        <outlet property="searchResultsDataSource" destination="yjp-Qq-EFB" id="rFb-hi-xmA"/>
+                        <outlet property="searchResultsDelegate" destination="yjp-Qq-EFB" id="Mf7-C7-fQQ"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="lae-KY-3ES">
+                    <connections>
+                        <outlet property="delegate" destination="yjp-Qq-EFB" id="xad-FK-5yZ"/>
+                        <outlet property="searchContentsController" destination="yjp-Qq-EFB" id="UEa-9r-7ef"/>
+                        <outlet property="searchResultsDataSource" destination="yjp-Qq-EFB" id="ncY-LU-JCo"/>
+                        <outlet property="searchResultsDelegate" destination="yjp-Qq-EFB" id="mA1-ea-q77"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="GRT-hk-6b6">
+                    <connections>
+                        <outlet property="delegate" destination="yjp-Qq-EFB" id="YFb-se-zNE"/>
+                        <outlet property="searchBar" destination="Tfr-Xd-Z0S" id="Ctk-k0-SXy"/>
+                        <outlet property="searchContentsController" destination="yjp-Qq-EFB" id="NR6-pr-Cv8"/>
+                        <outlet property="searchResultsDataSource" destination="yjp-Qq-EFB" id="LY2-if-CRX"/>
+                        <outlet property="searchResultsDelegate" destination="yjp-Qq-EFB" id="b1D-x1-NHk"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-267" y="-625.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -513,12 +626,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Unknown" width="129" height="97"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="230-Gj-rg1"/>
         <segue reference="JeA-Au-8sB"/>
+        <segue reference="yUm-wW-xFG"/>
     </inferredMetricsTieBreakers>
 </document>

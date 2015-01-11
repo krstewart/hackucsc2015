@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		238B94521A60F8980012A050 /* BodyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B94511A60F8980012A050 /* BodyInfoViewController.swift */; };
+		5CE8F0CD1A61E2F50038D8EB /* TeamSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE8F0CC1A61E2F50038D8EB /* TeamSearch.swift */; };
+		5CE8F0D11A61E3690038D8EB /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE8F0D01A61E3690038D8EB /* TeamTableViewController.swift */; };
+		5CE8F0D71A61ECEF0038D8EB /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE8F0D61A61ECEF0038D8EB /* RegViewController.swift */; };
 		BF5E96BF1A60B8450024D538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96BE1A60B8450024D538 /* AppDelegate.swift */; };
 		BF5E96C11A60B8450024D538 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96C01A60B8450024D538 /* FirstViewController.swift */; };
 		BF5E96C31A60B8450024D538 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E96C21A60B8450024D538 /* SecondViewController.swift */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		238B94511A60F8980012A050 /* BodyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyInfoViewController.swift; sourceTree = "<group>"; };
+		5CE8F0CC1A61E2F50038D8EB /* TeamSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSearch.swift; sourceTree = "<group>"; };
+		5CE8F0D01A61E3690038D8EB /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		5CE8F0D61A61ECEF0038D8EB /* RegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		BF5E96B91A60B8450024D538 /* TeamFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5E96BD1A60B8450024D538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5E96BE1A60B8450024D538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				BF5E96C71A60B8450024D538 /* Images.xcassets */,
 				BF5E96C91A60B8450024D538 /* LaunchScreen.xib */,
 				BF5E96BC1A60B8450024D538 /* Supporting Files */,
+				5CE8F0CC1A61E2F50038D8EB /* TeamSearch.swift */,
+				5CE8F0D01A61E3690038D8EB /* TeamTableViewController.swift */,
+				5CE8F0D61A61ECEF0038D8EB /* RegViewController.swift */,
 			);
 			path = TeamFit;
 			sourceTree = "<group>";
@@ -220,8 +229,11 @@
 			files = (
 				238B94521A60F8980012A050 /* BodyInfoViewController.swift in Sources */,
 				BF5E96C31A60B8450024D538 /* SecondViewController.swift in Sources */,
+				5CE8F0D11A61E3690038D8EB /* TeamTableViewController.swift in Sources */,
 				BF5E96BF1A60B8450024D538 /* AppDelegate.swift in Sources */,
+				5CE8F0CD1A61E2F50038D8EB /* TeamSearch.swift in Sources */,
 				BF5E96C11A60B8450024D538 /* FirstViewController.swift in Sources */,
+				5CE8F0D71A61ECEF0038D8EB /* RegViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +356,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TeamFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +368,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TeamFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
